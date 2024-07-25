@@ -1,15 +1,12 @@
-import { useAuth, useUser } from "@clerk/clerk-react";
+import { useUser } from "@clerk/clerk-react";
 import { FinancialRecordForm } from "./financial-record-form";
 import { FinancialRecordList } from "./financial-record-list";
 import { useFinancialRecords } from "../../contexts/financial-record-context";
 import { useMemo } from "react";
-import { Navigate } from "react-router-dom";
 
 export const Dashboard  = () =>
 {
-    const { isSignedIn} = useAuth()
-    // if(!isLoaded) return null;
-    if(!isSignedIn) return <Navigate to={'/'} />
+
     const { user } = useUser();
     const { records } = useFinancialRecords();
 
