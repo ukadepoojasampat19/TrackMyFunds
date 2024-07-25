@@ -3,12 +3,13 @@ import { FinancialRecordForm } from "./financial-record-form";
 import { FinancialRecordList } from "./financial-record-list";
 import { useFinancialRecords } from "../../contexts/financial-record-context";
 import { useMemo } from "react";
+import { Navigate } from "react-router-dom";
 
 export const Dashboard  = () =>
 {
-    const {isLoaded , isSignedIn} = useAuth()
-    if(!isLoaded) return null;
-    if(!isSignedIn) return <h1>Please sign in</h1>
+    const { isSignedIn} = useAuth()
+    // if(!isLoaded) return null;
+    if(!isSignedIn) return <Navigate to={'/'} />
     const { user } = useUser();
     const { records } = useFinancialRecords();
 

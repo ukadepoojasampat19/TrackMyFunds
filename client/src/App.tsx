@@ -1,16 +1,16 @@
 
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Dashboard } from './pages/dashboard';
 import { Auth } from './pages/auth';
 import { FinancialRecordsProvider } from './contexts/financial-record-context';
-import { SignedIn, useAuth, UserButton } from '@clerk/clerk-react';
+import { SignedIn, UserButton } from '@clerk/clerk-react';
 
 
 
 function App() {
 
-    const {isSignedIn} =  useAuth()
+    // const {isSignedIn} =  useAuth()
     
     
   return (
@@ -29,8 +29,8 @@ function App() {
         <Routes>
           <Route path="/dashboard" element={  // all the componest in dashboard will have acces to record provider componenets
             <FinancialRecordsProvider>
-              
-              { isSignedIn ? <Dashboard /> : <Navigate to="/" /> }
+              <Dashboard/>
+              {/* { isSignedIn ? <Dashboard /> : <Navigate to="/" /> } */}
             </FinancialRecordsProvider>} />
           <Route path="/"  element={<Auth />} />
         </Routes>
