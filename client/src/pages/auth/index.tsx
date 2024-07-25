@@ -13,7 +13,7 @@ export const Auth = () => {
                 <SignInButton mode="modal" />
             </SignedOut>
             <SignedIn>
-                <Navigate to ="/"></Navigate>
+                <Navigate to ="/dashboard"></Navigate>
             </SignedIn>
             </div>
         </div>
