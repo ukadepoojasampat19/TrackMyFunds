@@ -2,8 +2,10 @@ import { SignedIn, SignedOut, SignInButton, SignUpButton } from '@clerk/clerk-re
 import "./auth_t.css";
 import { Navigate } from 'react-router-dom';
 export const Auth = () => {
+    console.log("Auth");
     return(
         <div className="sign-in-container">
+            
             <div className='login'>
             <SignedOut>
             
