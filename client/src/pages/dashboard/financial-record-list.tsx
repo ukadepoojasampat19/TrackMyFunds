@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { FinancialRecord, useFinancialRecords } from "../../contexts/financial-record-context"
 import "./financial-record.css"
-import { useTable, Column, CellProps, Row } from "react-table";
+import { useTable, Column, CellProps } from "react-table";
 
 
 interface EditableCellProps extends CellProps<FinancialRecord> {
@@ -22,7 +22,7 @@ const EditableCell: React.FC<EditableCellProps> = ({ value: initalValue, row, co
 
         };
 
-        const date = new Date(value);
+        // const date = new Date(value);
         
 
         //following div will represent the cell.
@@ -118,7 +118,7 @@ export const FinancialRecordList = () => {
                                         ))}
                                 </thead>
                                 <tbody {...getTableBodyProps()}>
-                                        {rows.map((row, idx) => {
+                                        {rows.map((row) => {
                                                 prepareRow(row);
                                                 return (
                                                         <tr {...row.getRowProps()}>

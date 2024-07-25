@@ -1,10 +1,10 @@
 
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Dashboard } from './pages/dashboard';
 import { Auth } from './pages/auth';
 import { FinancialRecordsProvider } from './contexts/financial-record-context';
-import { SignedIn, SignOutButton, SignUpButton, UserButton } from '@clerk/clerk-react';
+import { SignedIn, UserButton } from '@clerk/clerk-react';
 
 function App() {
 
