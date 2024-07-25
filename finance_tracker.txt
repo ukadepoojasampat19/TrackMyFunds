@@ -1,0 +1,65 @@
+1)npm create vite
+2)install react router dom npm insta react-router-dom
+3) npm install @clerk/clerk-react
+mode ="model" will open the application in define route
+
+server
+
+server folder mde **npm init **
+install in server folder : npm install express @types/express mongoose @types/mongoose @types/mongoose nodemon ts-node typescriptnpx tsc --init
+npx tsc --init :
+npx: This is a utility included with npm that allows you to execute packages from the npm registry without installing them globally.
+tsc: This is the TypeScript compiler executable.
+--init: This flag tells tsc to generate a basic tsconfig.json file for you
+there will two folder src and build
+build: compile the javascript code generated from typecript(As we build the appilcation in typescript but the final code is of javascript)
+src:here the typescript code that we write.
+
+now we have make some changes in tsconfig.json file  1)change the "rootDir": "./src", to src where i have written the typescript code
+2)"outDir": "./build", here where we actually run the code
+
+configyre the packages.json file :
+"start": "node ./build/index.ts",
+"build": "tsc -p .",
+"dev": "nodemon ./src/index.ts"
+
+connect to the database (./src/indrx.ts)
+check whteher database connection workin
+
+build the schema for the database
+create the routes for the crude operation in serer file .
+
+// to scale the application
+create a contex hook that will shared an information of multiple users
+
+here mosty i have use useState hook and useContext hook
+
+*************
+first i create the financialRecordForm
+useState defien kele 
+tynchya valye ghetlay onChange event ni
+form submit zalayavr handelSubmit function call hoil
+ani data database mde jaeil
+handelsubmit function mde newRecord navacha component tyat saglay value store kelay fetcj kelelay
+mag att he je newRecord ahe te database la add zalapahije na 
+
+
+tya nanter backend che configurations
+saglay adhi schema navacha folder banvla tya database cha format banvla ani export kele model mde convert karun
+interface create that is structure of the document in the mongodb
+
+mag to schema export kracha routes folder mde 
+mag  thite sagla crud operation perform kela ani express chay router la main server file mde import kele that is index.ts
+ani mag thite app.use("/file jay file mde te component hote,named of the components);
+
+mag client mde src mde jaun context nanacha folder banvla 
+tyat saglayt pahile context cha structure banval means interface banval ani tyat
+records: FinancialRecord[];
+    addRecord: (record: FinancialRecord) => void;
+   // updateRecord: (id: string, newRecord: FinancialRecord) => void; //to update the sepecific data
+    //deleteRecord: (id: string) => void; //to delete the specific data
+ghosti define kelay
+
+
+*****displaying the list of records that we have in the database
+install react-table in client folder anf  npm install @types/react-table
