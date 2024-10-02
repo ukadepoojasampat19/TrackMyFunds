@@ -12,13 +12,16 @@ html {
 .app-container {
   width: 100vw;
   min-height: 100vh;
-  display: flex;
-  /* justify-content: center; */
-  
-  align-items: center;
- 
+  overflow: hidden;
+  background-image: url('C:/Users/kalpe/OneDrive/Desktop/pooja/finance_tracker/client/src/images/tracker.jpg'); 
 }
-
+.dashboard {
+   background-color: pink;
+   
+}
+.app-container-hidden {
+  display: none;
+}
 /* Navbar styles */
 /*.navbar {
   background-color: #3498db; // Blue shade that matches button colors 

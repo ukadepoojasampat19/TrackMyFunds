@@ -1,18 +1,15 @@
 /* auth_t.css */
-html, body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-}
+
 
 .sign-in-container {
-  /* background-image: url('C:/Users/kalpe/OneDrive/Desktop/pooja/finance_tracker/client/src/images/tracker.jpg'); */
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the image */
-  background-attachment: fixed; /* Ensures the background image doesn't scroll */
-  height: 100vh; /* Full height to cover the entire viewport */
-  width: 100%; /* Full width to cover the entire viewport */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ 
+ /* Ensures the image covers the entire container */
+ overflow: hidden;
+ position:fixed;
+ margin: 250px 510px;
+ 
+ 
+ 
+  
+  
 }
