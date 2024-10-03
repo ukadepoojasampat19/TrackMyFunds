@@ -10,10 +10,16 @@ html {
 }
 
 .app-container {
-  width: 100vw;
+  width: 100%;
+  
   min-height: 100vh;
-  overflow: hidden;
-  background-image: url('C:/Users/kalpe/OneDrive/Desktop/pooja/finance_tracker/client/src/images/tracker.jpg'); 
+  display: flex;
+  flex-direction: column;
+  /* justify-items: center; */
+  /* justify-content: center; */
+  align-items: center;
+  /* overflow: hidden; */
+  /* background-image: url('C:/Users/kalpe/OneDrive/Desktop/pooja/finance_tracker/client/src/images/tracker.jpg');  */
 }
 .dashboard {
    background-color: pink;
@@ -36,10 +42,29 @@ html {
 }*/
 .sign-in-container {
   margin-top: 300px;
+  /* background-color: #333; */
 }
 
 .sign-in-container button {
   margin: 10px;
+}
+.navbar{
+  background-color: #FF6500;
+  color: white;
+  width: 100%;
+  padding: 20px 30px ;
+  display: flex;
+  justify-content: space-between;
+  /* border-radius: 5rem; */
+}
+
+.title{
+  /* color: black; */
+  font-size: x-large;
+  font-weight: bold;
+  /* text shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 

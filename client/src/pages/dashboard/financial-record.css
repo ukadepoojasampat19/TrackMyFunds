@@ -1,20 +1,35 @@
 /* Centered container for the app */
 .dashboard-container {
-    width: 80%;
-    
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
   
+  .dashboard{
+    background-color: white;
+    display: flex;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border: #ff6500 2px solid;
+  }
+
   /* General styling for headers within the app */
   h1,
   h2 {
     color: #2c3e50;
     text-align: center;
-    margin-top: 115px;
+    /* margin-top: 115px; */
     
   }
   
   /* Form and list container */
-  .form-container,
+  
+.form-container{
+  width: 60%;
+}
+
   .list-container {
     margin-bottom: 20px;
   }
