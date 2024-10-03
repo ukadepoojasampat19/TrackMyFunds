@@ -34,7 +34,8 @@ function App() {
               {isSignedIn ? <Dashboard /> : <Navigate to="/" />}
             </FinancialRecordsProvider>} />
           <Route path="/" element={
-            <div style={{ backgroundImage: `url(${img})` }} className='app-container' >
+            <div style={{ backgroundImage: `url(${img})` }} className="app-container">
+
               <Auth />
             </div>
 

@@ -13,3 +13,18 @@
   
   
 }
+
+.login button {
+    background-color: #ff7500;
+    padding: 5px 15px;
+    width: 7rem;
+    height: 2.5em;
+    /* border: whitesmoke solid; */
+    /* white shadow */
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}

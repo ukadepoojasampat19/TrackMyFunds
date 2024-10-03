@@ -10,7 +10,6 @@ export const Auth = () => {
             
             <div className='login'>
             <SignedOut>
-            
                 <SignUpButton mode="modal" />
                 <SignInButton mode="modal" />
             </SignedOut>
