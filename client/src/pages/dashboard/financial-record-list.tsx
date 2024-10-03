@@ -109,7 +109,7 @@ export const FinancialRecordList = () => {
                         <table {...getTableProps()} className="table">
                                 <thead>
                                         {headerGroups.map((hg) => (
-                                                <tr  {...hg.getHeaderGroupProps()}>
+                                                <tr className="table-head"  {...hg.getHeaderGroupProps()}>
                                                         {hg.headers.map((column) => (
                                                                 <th {...column.getHeaderProps()}> {column.render("Header")}</th>
                                                         ))}
@@ -117,7 +117,7 @@ export const FinancialRecordList = () => {
 
                                         ))}
                                 </thead>
-                                <tbody {...getTableBodyProps()}>
+                                <tbody style={{overflowY:"auto"}} {...getTableBodyProps()}>
                                         {rows.map((row) => {
                                                 prepareRow(row);
                                                 return (

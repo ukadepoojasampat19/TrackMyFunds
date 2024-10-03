@@ -8,11 +8,27 @@
   }
   
   .dashboard{
-    background-color: white;
+    background-color: #f2f2f2;
     display: flex;
+    gap: 2.5rem;
     padding: 2.5rem;
     border-radius: 1rem;
     border: #ff6500 2px solid;
+  }
+
+  @media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column; /* Change to column layout on smaller screens */
+    }
+}
+
+  .records{
+    /* background-color: #2980b9; */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    border-radius: 1rem;
+    /* max-width: max-content; */
   }
 
   /* General styling for headers within the app */
@@ -84,21 +100,31 @@
   }
   
   .table-container {
-    margin: 20px;
+    /* margin: 20px; */
+    border-radius: 1em;
+    overflow-y: auto;
+    /* background-color: #2980b9; */
     overflow-x: auto; /* Enables horizontal scrolling if the table is too wide */
+    overflow-y: auto; /* Enables horizontal scrolling if the table is too wide */
   }
   
   .table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
   }
+
+  
   
   .table th,
   .table td {
     padding: 12px 15px;
     border: 1px solid #ddd; /* Light grey border for cells */
+    position: sticky;
+    top: 0;
     text-align: left;
   }
   
@@ -114,4 +140,9 @@
   
   .table tbody tr:hover {
     background-color: #e8f4f8; /* Light blue hover effect for rows */
+  }
+
+  .table tbody {
+    max-height: 200px; /* Adjust the height for scrolling */
+    overflow-y: auto;
   }

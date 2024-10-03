@@ -22,7 +22,7 @@ export const Dashboard = () => {
             <h1> Welcome {user?.firstName}! Here are your finances:</h1>
             <div className="dashboard" >
                 <FinancialRecordForm />
-                <div>
+                <div className="records">
                     <div>Total Monthly: ${totalMonthly}</div>
                     <FinancialRecordList />
                 </div>
