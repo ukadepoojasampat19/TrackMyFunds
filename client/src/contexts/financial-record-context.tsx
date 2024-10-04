@@ -44,7 +44,7 @@ export const FinancialRecordsProvider = ({
            
             
             let response = await fetch(
-                `https://trackmyfunds.onrender.com/financial-record/getAllByUserId/${user.id}`
+                `https://finance-tracker-78hg.onrender.com/financial-record/getAllByUserId/${user.id}`
             );
 
             console.log(response)
@@ -74,7 +74,7 @@ export const FinancialRecordsProvider = ({
     //add records
     const addRecord = async (record: FinancialRecord) => {
         if(!user) return;
-        const response = await fetch(`https://trackmyfunds.onrender.com/financial-record/`, {
+        const response = await fetch(`https://finance-tracker-78hg.onrender.com/financial-record/`, {
             method: "POST",
             body: JSON.stringify(record),
             headers: {
@@ -100,7 +100,7 @@ export const FinancialRecordsProvider = ({
     
     //update record
     const updateRecord = async (id: string, newRecord: FinancialRecord) => {
-        const response = await fetch(`https://trackmyfunds.onrender.com/financial-record/${id}`, {
+        const response = await fetch(`https://finance-tracker-78hg.onrender.com/financial-record/${id}`, {
             method: "PUT",
             body: JSON.stringify(newRecord),
             headers: {
@@ -123,7 +123,7 @@ export const FinancialRecordsProvider = ({
     };
     //delete record
    const deleteRecord = async (id: string) => {
-        const response = await fetch(`https://trackmyfunds.onrender.com/financial-record/${id}`, {
+        const response = await fetch(`https://finance-tracker-78hg.onrender.com/financial-record/${id}`, {
             method: "DELETE",
         });
 
