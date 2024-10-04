@@ -30,6 +30,10 @@ mongoose
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get("/", (req, res) => {
+    res.send("Hello from TrackMyFunds server!");
+});
+
 app.use("/financial-record", financialRecordRouter);
 app.listen( port , () =>
 {
